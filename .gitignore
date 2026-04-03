@@ -20,3 +20,4 @@ env/
 Thumbs.db
 strategic_engine.db
 .db
+*.db
