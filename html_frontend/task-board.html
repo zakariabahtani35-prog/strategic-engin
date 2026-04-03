@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board - Strategic Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">⚡</div>
+            Strategic Engine
+        </div>
+
+        <div class="nav-section">Menu</div>
+        <a href="index.html" class="nav-item">
+            <span>⊞</span> Dashboard
+        </a>
+        <a href="process-meeting.html" class="nav-item">
+            <span>✧</span> Process Meeting
+        </a>
+        <a href="task-board.html" class="nav-item active">
+            <span>☑</span> Task Board <span class="nav-badge">12+</span>
+        </a>
+
+        <div class="nav-section">System</div>
+        <a href="#" class="nav-item"><span>⚙</span> Settings</a>
+        <a href="#" class="nav-item"><span>?</span> Help</a>
+
+        <div class="sidebar-card">
+            <h4>System Architecture</h4>
+            <p>Intelligence Platform v3.1</p>
+            <button class="btn-download">Run Diagnostics</button>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Search operational matrices...">
+                <span class="search-shortcut">⌘K</span>
+            </div>
+            <div class="user-profile">
+                <div class="icon-btn">✉</div>
+                <div class="icon-btn">🔔</div>
+                <div class="profile-info">
+                    <div style="width:40px;height:40px;background:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">👤</div>
+                    <div class="profile-text">
+                        <h4>Executive Lead</h4>
+                        <p>admin@strategy.io</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE HEADER -->
+        <div class="page-header" style="margin-bottom: 3rem;">
+            <div>
+                <h1>Tactical Board</h1>
+                <p>Monitor, filter, and resolve your team's assigned directives.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-secondary">Filter ▿</button>
+            </div>
+        </div>
+
+        <!-- TASK CONTAINER -->
+        <div class="card" style="padding: 1rem 2.5rem;">
+            <table class="task-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Directive</th>
+                        <th style="width: 20%;">Executive Assigned</th>
+                        <th style="width: 15%;">Node Limit</th>
+                        <th style="width: 10%;">Priority</th>
+                        <th style="width: 15%; text-align: right;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Develop API Endpoints</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">From Session: Architecture Sync Q4</span></td>
+                        <td>
+                            <div style="display:flex; align-items:center; gap:0.5rem;">
+                                <div class="team-avatar" style="width:28px;height:28px;font-size:0.7rem;">AD</div>
+                                <span style="font-size:0.85rem;font-weight:600;">Alexandra Deff</span>
+                            </div>
+                        </td>
+                        <td><span style="font-size:0.85rem; color:var(--text-muted);">Nov 26, 2024</span></td>
+                        <td><span class="pill pill-high">High</span></td>
+                        <td style="text-align: right;">
+                            <select style="padding:0.4rem 0.8rem; border-radius:30px; border:1px solid var(--border); font-size:0.8rem; background: var(--bg-surface); outline:none;">
+                                <option>Pending</option>
+                                <option selected>In Progress</option>
+                                <option>Done</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Onboarding Flow Review</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">From Session: Growth Hacking Group</span></td>
+                        <td>
+                            <div style="display:flex; align-items:center; gap:0.5rem;">
+                                <div class="team-avatar" style="width:28px;height:28px;font-size:0.7rem;background:#dcfce3;color:#15803d;">EA</div>
+                                <span style="font-size:0.85rem;font-weight:600;">Edwin Adenike</span>
+                            </div>
+                        </td>
+                        <td><span style="font-size:0.85rem; color:var(--text-muted);">Nov 28, 2024</span></td>
+                        <td><span class="pill pill-mid">Medium</span></td>
+                        <td style="text-align: right;">
+                            <select style="padding:0.4rem 0.8rem; border-radius:30px; border:1px solid var(--border); font-size:0.8rem; background: var(--bg-surface); outline:none;">
+                                <option selected>Pending</option>
+                                <option>In Progress</option>
+                                <option>Done</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr style="opacity: 0.6;">
+                        <td><strong style="text-decoration:line-through;">Optimize Page Load Payload</strong><br><span style="font-size: 0.75rem; color: var(--text-muted);">From Session: Core Web Vitals Audit</span></td>
+                        <td>
+                            <div style="display:flex; align-items:center; gap:0.5rem;">
+                                <div class="team-avatar" style="width:28px;height:28px;font-size:0.7rem;background:#fef3c7;color:#b45309;">IO</div>
+                                <span style="font-size:0.85rem;font-weight:600;">Isaac Oluwa.</span>
+                            </div>
+                        </td>
+                        <td><span style="font-size:0.85rem; color:var(--text-muted);">Dec 5, 2024</span></td>
+                        <td><span class="pill pill-low">Low</span></td>
+                        <td style="text-align: right;">
+                            <span class="pill pill-done">Completed</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>

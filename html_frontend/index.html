@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Strategic Engine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">⚡</div>
+            Strategic Engine
+        </div>
+
+        <div class="nav-section">Menu</div>
+        <a href="index.html" class="nav-item active">
+            <span>⊞</span> Dashboard
+        </a>
+        <a href="process-meeting.html" class="nav-item">
+            <span>✧</span> Process Meeting
+        </a>
+        <a href="task-board.html" class="nav-item">
+            <span>☑</span> Task Board <span class="nav-badge">12+</span>
+        </a>
+
+        <div class="nav-section">System</div>
+        <a href="#" class="nav-item"><span>⚙</span> Settings</a>
+        <a href="#" class="nav-item"><span>?</span> Help</a>
+
+        <div class="sidebar-card">
+            <h4>System Architecture</h4>
+            <p>Intelligence Platform v3.1</p>
+            <button class="btn-download">Run Diagnostics</button>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Search intelligence logs...">
+                <span class="search-shortcut">⌘K</span>
+            </div>
+            <div class="user-profile">
+                <div class="icon-btn">✉</div>
+                <div class="icon-btn">🔔</div>
+                <div class="profile-info">
+                    <div style="width:40px;height:40px;background:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">👤</div>
+                    <div class="profile-text">
+                        <h4>Executive Lead</h4>
+                        <p>admin@strategy.io</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Generate, analyze, and execute your strategic intelligence.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-secondary">Export Data</button>
+                <a href="process-meeting.html" style="text-decoration:none;"><button class="btn-primary">＋ New Analysis</button></a>
+            </div>
+        </div>
+
+        <!-- KPI CARDS -->
+        <div class="kpi-grid">
+            <div class="kpi-card primary">
+                <div class="kpi-header">
+                    Total Meetings Analyzed
+                    <div class="kpi-icon">↗</div>
+                </div>
+                <div class="kpi-value">24</div>
+                <div class="kpi-trend">
+                    <span class="trend-badge">↑ 15%</span> Increased from last month
+                </div>
+            </div>
+            
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    Action Items Extracted
+                    <div class="kpi-icon">↗</div>
+                </div>
+                <div class="kpi-value">128</div>
+                <div class="kpi-trend">
+                    <span class="trend-badge" style="background:#f1f5f9; color:#64748b;">↑ 4%</span> Increased from last month
+                </div>
+            </div>
+            
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    High Priority Tasks
+                    <div class="kpi-icon">↗</div>
+                </div>
+                <div class="kpi-value">12</div>
+                <div class="kpi-trend">
+                    <span class="trend-badge" style="background:#fee2e2; color:#b91c1c;">↑ 2</span> Needs immediate attention
+                </div>
+            </div>
+            
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    Critical Risks Detected
+                    <div class="kpi-icon">↗</div>
+                </div>
+                <div class="kpi-value">3</div>
+                <div class="kpi-trend">
+                    <span class="trend-badge" style="background:#fef3c7; color:#b45309;">⚠</span> Under Review
+                </div>
+            </div>
+        </div>
+
+        <!-- WIDGET GRID ROW 1 -->
+        <div class="widget-grid" style="margin-bottom: 1.5rem;">
+            <!-- CHART -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Intelligence Extraction Yield</div>
+                </div>
+                <div style="height: 200px; width: 100%;">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- UPCOMING -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Pending Synthesis</div>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size:1.1rem; color:var(--primary); margin-bottom:0.25rem;">Q3 Roadmap Alignment</h3>
+                    <p style="font-size:0.8rem; color:var(--text-muted);">Queued for Processing</p>
+                </div>
+                <button class="btn-primary" style="width: 100%; justify-content: center;">Execute Engine</button>
+            </div>
+            
+            <!-- LIST -->
+            <div class="card" style="grid-column: 3;">
+                <div class="card-header">
+                    <div class="card-title">Recent Sessions</div>
+                    <button class="btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;">+ New</button>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon" style="background:#eff6ff; color:#3b82f6;">/</div>
+                    <div class="list-content">
+                        <h4>Develop API Specs</h4>
+                        <p>Analyzed: Nov 26, 2024</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon" style="background:#ecfdf5; color:#10b981;">◎</div>
+                    <div class="list-content">
+                        <h4>Onboarding Flow</h4>
+                        <p>Analyzed: Nov 28, 2024</p>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon" style="background:#fef3c7; color:#f59e0b;">✧</div>
+                    <div class="list-content">
+                        <h4>Sales Strategy Q1</h4>
+                        <p>Analyzed: Dec 1, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WIDGET GRID ROW 2 -->
+        <div class="widget-grid">
+            <!-- TEAM -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Executive Assignees</div>
+                    <button class="btn-secondary" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;">+ Invite</button>
+                </div>
+                <div class="team-item">
+                    <div class="team-avatar">A</div>
+                    <div class="team-info">
+                        <h4>Alexandra Deff</h4>
+                        <p>Handling API Endpoints</p>
+                    </div>
+                    <span class="status-pill status-completed">Completed</span>
+                </div>
+                <div class="team-item">
+                    <div class="team-avatar" style="background:#dcfce3; color:#15803d;">E</div>
+                    <div class="team-info">
+                        <h4>Edwin Adenike</h4>
+                        <p>Handling Auth System Migration</p>
+                    </div>
+                    <span class="status-pill status-progress">In Progress</span>
+                </div>
+            </div>
+            
+            <!-- DOUGNUT -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Action Resolution</div>
+                </div>
+                <div style="height: 160px; position: relative;">
+                    <canvas id="doughnutChart"></canvas>
+                    <div style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <div style="font-size: 2rem; font-weight: 800; color: var(--text-main); line-height: 1;">41%</div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted);">Tasks Resolved</div>
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:center; gap:1rem; font-size:0.75rem; margin-top:1rem;">
+                    <span style="display:flex; align-items:center; gap:0.3rem;"><span style="width:8px;height:8px;border-radius:50%;background:var(--primary);"></span> Resolved</span>
+                    <span style="display:flex; align-items:center; gap:0.3rem;"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></span> Active</span>
+                </div>
+            </div>
+            
+            <!-- STATUS -->
+            <div>
+                <div class="tracker-card">
+                    <h4>System Link Status</h4>
+                    <div class="tracker-time">ONLINE</div>
+                    <p style="text-align:center; font-size:0.85rem; color:#a7f3d0; margin-bottom:1.5rem;">Database Sync Active</p>
+                    <div class="tracker-controls">
+                        <button class="ctrl-btn ctrl-pause">↻</button>
+                        <button class="ctrl-btn ctrl-stop">⚠</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

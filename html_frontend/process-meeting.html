@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Intelligence - Strategic Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">⚡</div>
+            Strategic Engine
+        </div>
+
+        <div class="nav-section">Menu</div>
+        <a href="index.html" class="nav-item">
+            <span>⊞</span> Dashboard
+        </a>
+        <a href="process-meeting.html" class="nav-item active">
+            <span>✧</span> Process Meeting
+        </a>
+        <a href="task-board.html" class="nav-item">
+            <span>☑</span> Task Board <span class="nav-badge">12+</span>
+        </a>
+
+        <div class="nav-section">System</div>
+        <a href="#" class="nav-item"><span>⚙</span> Settings</a>
+        <a href="#" class="nav-item"><span>?</span> Help</a>
+
+        <div class="sidebar-card">
+            <h4>System Architecture</h4>
+            <p>Intelligence Platform v3.1</p>
+            <button class="btn-download">Run Diagnostics</button>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Search operational matrices...">
+                <span class="search-shortcut">⌘K</span>
+            </div>
+            <div class="user-profile">
+                <div class="icon-btn">✉</div>
+                <div class="icon-btn">🔔</div>
+                <div class="profile-info">
+                    <div style="width:40px;height:40px;background:#e2e8f0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">👤</div>
+                    <div class="profile-text">
+                        <h4>Executive Lead</h4>
+                        <p>admin@strategy.io</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <div>
+                <h1>Process Meeting</h1>
+                <p>Inject raw transcripts to generate structured knowledge and assignments.</p>
+            </div>
+        </div>
+
+        <!-- PROCESS CONSOLE -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 2rem;">
+            <div class="form-group">
+                <label class="form-label">Session Designation</label>
+                <input type="text" class="form-control" placeholder="e.g., Project Alpha - Q4 Strategy Alignment">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Raw Data Stream (Transcript)</label>
+                <textarea class="form-control" placeholder="Paste the raw meeting transcript, conversational notes, or agenda here. The AI Core will automatically infer context, intent, and assignments."></textarea>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="btn-primary" style="padding: 1rem 2rem; font-size: 1.05rem;">⚡ Execute Intelligence Extraction</button>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Uses Gemini 1.5 Pro Matrix</span>
+            </div>
+        </div>
+
+        <!-- SIMULATED RESULTS HUB -->
+        <h3 style="margin-bottom: 1.5rem;">Intelligence Hub Matrix</h3>
+        <div class="widget-grid" style="grid-template-columns: 1.5fr 1fr;">
+            
+            <div class="card">
+                <div class="tabs">
+                    <div class="tab active">Executive Brief</div>
+                    <div class="tab">Detailed Output</div>
+                </div>
+                <div style="line-height: 1.6; color: var(--text-main);">
+                    <p style="margin-bottom: 1rem;"><strong>Executive Summary:</strong> The leadership team reached a consensus migrating the authentication pipeline to OAuth 2.0 while deferring the frontend overhaul to next quarter due to resource constraints.</p>
+                    <p>Expected outcome is a 40% reduction in security vulnerabilities, managed internally by the DevSecOps quadrant.</p>
+                </div>
+            </div>
+
+            <div class="card" style="background: var(--bg-page); border: 1px dashed var(--border);">
+                <div class="card-header">
+                    <div class="card-title">Threat Landscape</div>
+                </div>
+                <div class="insight-item risk">Dependency bottleneck on external API vendor (CloudKey).</div>
+                <div class="insight-item step">Schedule immediate failover strategy session.</div>
+                <div class="insight-item step">Determine fallback authentication.</div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

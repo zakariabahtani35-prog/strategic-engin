@@ -1,0 +1,9 @@
+{
+  "name": "decision-os-core",
+  "version": "1.0.0",
+  "description": "Next-Generation AI Decision Operating System",
+  "scripts": {
+    "dev:api": "cd api && uvicorn main:app --reload",
+    "dev:web": "cd web && npm run dev"
+  }
+}
